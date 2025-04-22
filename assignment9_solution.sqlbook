@@ -1,0 +1,56 @@
+-- SQLBook: Code
+
+-- SQLBook: Markup
+# Assignment 9 Solution
+-- SQLBook: Markup
+### Name:
+-- SQLBook: Markup
+<font size="5">Lynne Zheng</font>
+
+-- SQLBook: Code
+DROP TABLE IF EXISTS movies;
+
+-- SQLBook: Markup
+### a) Part 1: Creating Tables
+-- SQLBook: Code
+CREATE TABLE movies (
+    movie_id INTEGER,
+    title VARCHAR(50),
+    director VARCHAR(30),
+    release_year INTEGER,
+    rating DECIMAL
+);
+
+-- SQLBook: Markup
+### a) Part 2: Adding rows to the table
+-- SQLBook: Code
+INSERT INTO movies (movie_id, title, director, release_year, rating) VALUES
+(1, 'The Shawshank Redemption', 'Frank Darabont', 1994, 9.3),
+(2, 'Parasite', 'Bong Joon-ho', 2019, 8.5),
+(3, 'The Dark Knight', 'Christopher Nolan', 2008, 9.0),
+(4, 'Inception', 'Christopher Nolan', 2010, 8.8),
+(5, 'Interstellar', 'Christopher Nolan', 2014, 8.6);
+
+-- SQLBook: Markup
+### b) Part 3: Select all movies released after 2010
+-- SQLBook: Code
+SELECT * FROM movies
+WHERE release_year > 2010;
+
+-- SQLBook: Markup
+### c) Part 4: Select all movies with rating greater than 9
+-- SQLBook: Code
+SELECT * FROM movies
+WHERE rating > 9.0;
+
+-- SQLBook: Markup
+### d) Part 5: Count of movies by Christopher Nolan
+-- SQLBook: Code
+SELECT COUNT(*) AS nolan_movie_count
+FROM movies
+WHERE director = 'Christopher Nolan';
+
+-- SQLBook: Markup
+### e) Part 6: Average rating of all movies
+-- SQLBook: Code
+SELECT AVG(rating) AS average_rating FROM movies;
