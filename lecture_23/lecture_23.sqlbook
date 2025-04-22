@@ -36,6 +36,7 @@ panel on the left:
 
 Delete existing table
 -- SQLBook: Code
+-- Active: 1745110819896@@127.0.0.1@5432@postgres
 -- Active: 1710903290079@@127.0.0.1@5432@postgres
 -- If the table already exists we can drop it:
 -- If it doesn't exist nothing happens
@@ -85,6 +86,7 @@ View the table in the VSC "Database" Panel
 $\qquad$ <img src="figures/view_table_sql.png" alt="drawing" width="350"/>
 
 -- SQLBook: Code
+-- Active: 1745110819896@@127.0.0.1@5432@postgres
 -- In SQL, a set of tables is called a "Schema"
 -- Click "refresh" to see changes
 -- The pencil button edits column attributes
@@ -161,7 +163,7 @@ Sort
 -- SQLBook: Code
 -- Order in ascending order of victories
 -- Remember that * means that all columns are selected
-SELECT driver_name FROM drivers
+SELECT driver_name, victories FROM drivers
 ORDER BY victories ASC;
 
 -- Order in descending order of victories
